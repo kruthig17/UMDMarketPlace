@@ -1,0 +1,5 @@
+/* styles.css */
+.card-img-1 {
+    width: 10px; /* Specify the desired width */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
