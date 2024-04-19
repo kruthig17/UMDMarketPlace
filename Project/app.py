@@ -26,17 +26,24 @@ def login():
 def signup():
     return render_template('signup.html')
 
+@app.route('/orderhistory')
+def orderhistory():
+    return render_template('orderhistory/orderhistory.html')
+
 @app.route('/shopping')
 def shop():
     items = [
-    {"name": "Item 1", "description": "Description for Item 1", "image": "https://via.placeholder.com/150"},
-    {"name": "Item 2", "description": "Description for Item 2", "image": "https://via.placeholder.com/150"},
-    {"name": "Item 3", "description": "Description for Item 3", "image": "https://via.placeholder.com/150"},
-    {"name": "Item 4", "description": "Description for Item 4", "image": "https://via.placeholder.com/150"},
-    {"name": "Item 5", "description": "Description for Item 5", "image": "https://via.placeholder.com/150"}
+    {"name": "Item 1", "description": "Description for Item 1","price":"$250", "image": "https://via.placeholder.com/150"},
+    {"name": "Item 2", "description": "Description for Item 2", "image": "https://via.placeholder.com/150","price":"$350"},
+    {"name": "Item 3", "description": "Description for Item 3", "image": "https://via.placeholder.com/150","price":"$250"},
+    {"name": "Item 4", "description": "Description for Item 4", "image": "https://via.placeholder.com/150","price":"$150"},
+    {"name": "Item 5", "description": "Description for Item 5", "image": "https://via.placeholder.com/150","price":"$50"}
 ]
 
+
     return render_template('shop/shop.html', items=items)
+
+
 
 @app.route('/cart')
 def cart():
