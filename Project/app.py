@@ -42,5 +42,13 @@ def shop():
 
 
     return render_template('shop/shop.html', items=items)
+
+
+
+@app.route('/cart')
+def cart():
+    return render_template('cart/cart.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
